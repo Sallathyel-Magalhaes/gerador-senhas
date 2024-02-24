@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Gerador de senhas, gerar senhas">
-    <link rel="shortcut icon" href="assets/senha.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Gerador de senhas, gerar senhas" />
+    <link rel="shortcut icon" href="assets/senha.png" type="image/x-icon" />
     <title>Gerador de Senha</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <img class="bg" src="assets/gggggggg.gif" alt="background">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img class="bg" src="assets/gggggggg.gif" alt="background" />
     <main class="container-input">
-        <span>Tamanho: <span id="valor"></span> caracteres</span>
-        <input id="slider" class="slider" type="range" min="4" max="25" value="8">
+      <span>Tamanho: <span id="valor"></span> caracteres</span>
+      <input
+        id="slider"
+        class="slider"
+        type="range"
+        min="4"
+        max="25"
+        value="8"
+      />
 
-        <button id="button" class="btn-cta" onclick="generatePass()">Gerar Senha</button>
+      <div class="container-textCheck">
+        <div class="apn">
+          <p>Apenas números? Ative:</p>
+        </div>
+        <div class="toggle-container">
+          <input id="numOnlyCheckbox" type="checkbox" class="toggle-checkbox" />
+          <label for="numOnlyCheckbox" class="toggle-label"></label>
+        </div>
+      </div>
+
+      <button id="button" class="btn-cta" onclick="generatePassWithCriteria()">
+        Gerar Senha
+      </button>
     </main>
 
     <div id="container-pass" class="container-pass hide" onclick="copyPass()">
-        <span class="title">Sua senha é:</span>
-        <span id="pass" class="senha"></span>
-        <span id="tooltip" class="tooltip">Clique na senha para copiar☝</span>
+      <span class="title">Sua senha é:</span>
+      <span id="pass" class="senha"></span>
+      <span id="tooltip" class="tooltip">Clique na senha para copiar☝</span>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

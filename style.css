@@ -36,11 +36,84 @@ body {
     -webkit-appearance: none;
     width: 100%;
     border-radius: 5px;
-    background: rgba(188, 241, 180, 0.685);
+    background: #3c2e7a;
     height: 18px;
     outline: none;
     margin-top: 8px;
+    transition: opacity 0.2s;
 }
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px; /* Largura da bolinha */
+    height: 15px; /* Altura da bolinha */
+    background: #4CAF50; /* Cor de fundo da bolinha */
+    border-radius: 50%; /* Transforma a bolinha em um círculo */
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 15px; /* Largura da bolinha */
+    height: 15px; /* Altura da bolinha */
+    background: #4CAF50; /* Cor de fundo da bolinha */
+    border-radius: 50%; /* Transforma a bolinha em um círculo */
+    cursor: pointer;
+}
+
+
+.toggle-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-label::after {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #4CAF50;
+}
+
+.toggle-checkbox:checked + .toggle-label::after {
+    left: calc(100% - 18px);
+}
+
+.apn {
+    text-align: center;
+}
+
+.container-textCheck {
+    background-color: #574a9e;
+    padding-block: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
 
 .btn-cta {
     height: 40px;
@@ -51,6 +124,11 @@ body {
     margin-top: 25px;
     font-weight: bold;
     font-size: 15px;
+}
+
+.btn-cta:hover {
+    background-color: #3aa73e;
+    color: white;
 }
 
 .container-pass{
