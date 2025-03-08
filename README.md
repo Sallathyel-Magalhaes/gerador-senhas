@@ -1,4 +1,4 @@
 # gerador-senhas
 Gerador de Senhas em HTML, CSS e Javascript
 
-#Teste Já: [https://sallathyel-magalhaes.github.io/gerador-senhas/](https://vs-password-generator.netlify.app/)
+#Teste Já: [https://vs-password-generator.netlify.app/](https://vs-password-generator.netlify.app/)
